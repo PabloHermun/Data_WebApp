@@ -2,12 +2,19 @@
 
 A web application project designed to visualize and analyze vehicle data interactively using Streamlit.
 
+## 🌐 Live Demo
+
+Visit the deployed version: https://data-webapp-7ked.onrender.com
+
 ## 📁 Project Structure
 
 ```
 webdev_project/
+├── notebooks
+  └── EDA.ipynb
 ├── app.py
 ├── vehicles_us.csv
+├── requirements.txt
 └── README.md
 ```
 
