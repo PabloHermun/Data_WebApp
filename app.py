@@ -4,11 +4,13 @@ import streamlit as st
 
 car_data = pd.read_csv('vehicles_us.csv') # leer los datos
 
-st.header("About our cars") # Create a header
+st.header("Our cars in data") # Create a header
 
-hist_button = st.button('Build histogram') # crear un botón
+hist_box= st.checkbox('Build histogram') # crear una casilla de verificación
 
-if hist_button: # al hacer clic en el botón
+scat_box = st.checkbox('Build scatter plot') # create a checkbox
+
+if hist_box: # al hacer clic en el botón
     # escribir un mensaje
     st.write('Creating a histogram of the on-sale cars based on their mileage')
     
@@ -18,10 +20,7 @@ if hist_button: # al hacer clic en el botón
     # mostrar un gráfico Plotly interactivo
     st.plotly_chart(fig, use_container_width=True)
 
-
-scat_button = st.button('Build scatter plot') # create a button
-
-if scat_button:
+if scat_box:
     # Write a message
     st.write('Creating a scatter plot of the cars\' mileage and price')
 
